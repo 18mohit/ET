@@ -1,21 +1,40 @@
-import Image from 'next/image'
-import { Settings, Droplet, Wind, CheckCircle } from 'lucide-react'
-
-
-export default function ManufacturingProcess() {
+export default function SuratSection() {
   return (
-    <section className="w-full py-32 px-6 sm:px-8 lg:px-12 bg-secondary">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-5xl md:text-6xl font-serif text-white font-bold text-foreground mb-8 tracking-tight underline">
-              Heart of India's Textile Industry
-            </h2>
-            <p className="text-lg text-foreground/70 text-white font-light leading-relaxed tracking-wide mb-8">
-              Based in Surat, the textile capital of India, ELEVEN TEN is part of a rich legacy of craftsmanship and innovation. Surat's strategic location, skilled workforce, and advanced infrastructure make it the ideal base for manufacturing world-class threads. Our roots in this vibrant textile hub give us access to the finest raw materials and the most experienced professionals in the industry.
-            </p>
-            <p className="text-lg text-foreground/70 text-white font-light leading-relaxed tracking-wide">
-              Being in Surat means we're not just manufacturing threads—we're contributing to a global textile ecosystem while maintaining the highest standards of quality and sustainability.
-            </p>
+    <section className="w-full py-20 px-6 sm:px-10 bg-primary">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-16 sm:gap-20 items-center">
+
+        {/* Left */}
+        <div className="border-l border-white/20 pl-7">
+          <p className="text-[11px] tracking-[3px] uppercase text-white/50 mb-4 font-normal">
+            Surat, India
+          </p>
+          <h2 className="font-serif text-4xl sm:text-5xl text-white leading-tight font-normal">
+            Heart of India&apos;s{" "}
+            <em className="italic text-white/70">Textile Industry</em>
+          </h2>
+        </div>
+
+        {/* Right */}
+        <div>
+          <p className="text-sm font-light leading-[1.9] text-white/60 mb-5">
+            Based in Surat — India&apos;s textile capital — ELEVEN TEN draws from a rich legacy of craftsmanship. Our location gives us direct access to the finest raw materials, skilled artisans, and world-class infrastructure.
+          </p>
+          <p className="text-sm font-light leading-[1.9] text-white/60 mb-7">
+            Every thread we make is part of a larger story: contributing to a global textile ecosystem while upholding quality and sustainability.
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {["Raw Materials", "Skilled Craft", "Sustainability"].map((tag) => (
+              <span
+                key={tag}
+                className="text-[11px] tracking-[1.5px] uppercase text-white/60 px-3 py-1.5 border border-white/20 rounded-full font-normal"
+              >
+                {tag}
+              </span>
+            ))}
           </div>
-        </section>
-  )
+        </div>
+
+      </div>
+    </section>
+  );
 }

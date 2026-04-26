@@ -33,7 +33,7 @@ export default function AboutPage() {
         {/* Hero Section */}
         <section className="w-full h-96 md:h-screen bg-secondary text-background flex items-center justify-center relative overflow-hidden">
           <Image
-            src="/factory-machinery.jpg"
+            src="/Image1_About.png"
             alt="Manufacturing facility"
             fill
             className="absolute inset-0 w-full h-full object-cover"
